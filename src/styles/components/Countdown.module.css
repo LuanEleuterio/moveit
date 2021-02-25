@@ -12,7 +12,7 @@
   align-items: center;
   justify-content: space-evenly;
   background: var(--white);
-  box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 60px rgba(0, 0, 0, 0.05);
   border-radius: 5px;
   font-size: 8.5rem;
   text-align: center;
@@ -52,6 +52,27 @@
   outline: none;
 }
 
-.startCountdownButton:hover{
+.startCountdownButton:not(:disabled):hover{
   background: var(--blue-dark);
+}
+
+.startCountdownButtonActive{
+  background: var(--white);
+  color: var(--title);
+}
+
+.startCountdownButtonActive:not(:disabled):hover{
+  background: var(--red);
+  color: var(--white);
+}
+
+.startCountdownButton:disabled{
+  background: var(--white);
+  color: var(--text);
+  cursor: not-allowed;
+  border-bottom: 4px solid var(--green);
+  background-image: url('../../../public/icons/checked.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-position-x: 13em;
 }
